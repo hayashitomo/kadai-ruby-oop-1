@@ -9,14 +9,14 @@ class Team
     @drow = 0
   end
   
-  def calc_win_rate(win,lose)
+  def calc_win_rate
     total_games = win + lose
-      percentage = (win.to_f / total_games.to_f) * 100
-      return percentage#.round(2)
+      percentage = (win.to_f / total_games.to_f) 
+      percentage
   end
 
   def show_team_result
-    puts "#{@name}の2020年の成績は#{@win}勝#{@lose}敗#{@drow}分、勝率は#{calc_win_rate(win,lose)}です。"
+    puts "#{@name}の2020年の成績は#{@win}勝#{@lose}敗#{@drow}分、勝率は#{calc_win_rate}です。"
   end
 end
 
