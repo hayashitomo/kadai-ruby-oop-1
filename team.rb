@@ -2,11 +2,11 @@ class Team
   
   attr_accessor :name,:win,:lose,:drow
   
-  def initialize(name)
+  def initialize(name,win,lose,drow)
     @name = name
-    @win = 0
-    @lose = 0
-    @drow = 0
+    @win = win
+    @lose = lose
+    @drow = drow
   end
   
   def calc_win_rate
@@ -16,42 +16,24 @@ class Team
   end
 
   def show_team_result
-    puts "#{@name}の2020年の成績は#{@win}勝#{@lose}敗#{@drow}分、勝率は#{calc_win_rate}です。"
+    puts "#{@name} の2020年の成績は #{@win}勝 #{@lose}敗 #{@drow}分、勝率は #{calc_win_rate}です。"
   end
 end
 
-team_G = Team.new("Giants")
-team_G.win = 67
-team_G.lose = 45
-team_G.drow = 8
+team_G = Team.new("Giants",67,45,8)
 team_G.show_team_result
 
-team_T = Team.new("Tigers")
-team_T.win = 60
-team_T.lose = 53
-team_T.drow = 7
+team_T = Team.new("Tigers",60,53,7)
 team_T.show_team_result
 
-team_D = Team.new("Dragons")
-team_D.win = 60
-team_D.lose = 55
-team_D.drow = 5
+team_D = Team.new("Dragons",60,55,5)
 team_D.show_team_result
 
-team_B = Team.new("BayStars")
-team_B.win = 56
-team_B.lose = 58
-team_B.drow = 6
+team_B = Team.new("BayStars",56,58,6)
 team_B.show_team_result
 
-team_C = Team.new("Carp")
-team_C.win = 52
-team_C.lose = 56
-team_C.drow = 12
+team_C = Team.new("Carp",52,56,12)
 team_C.show_team_result
 
-team_S = Team.new("Swallows")
-team_S.win = 41
-team_S.lose = 69
-team_S.drow = 10
+team_S = Team.new("Swallows",41,69,10)
 team_S.show_team_result
